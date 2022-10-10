@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     EditText etNomorPendaftaran;
     EditText etNama;
-    Button btnNama
+    Button btnNama;
     String nomorPendaftaran, nama;
 
     @Override
