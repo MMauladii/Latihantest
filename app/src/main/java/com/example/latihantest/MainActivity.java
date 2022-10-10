@@ -9,35 +9,19 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    EditText etNomorPendaftaran;
-    EditText etNama;
-    Button btnNama;
-    String nomorPendaftaran, nama;
-
+    Button btnButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        btnButton =(Button)findViewById(R.id.bt_Button);
 
-        btnNama.setOnClickListener(new View.OnClickListener() {
+        btnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nomorPendaftaran = etNomorPendaftaran.getText().toString();
-                nama = etNama.getText().toString();
-
-                if (nomorPendaftaran.trim().equals("")){
-                    etNomorPendaftaran.setError("No Pendaftaran Harus Diisi!");
-                }
-                else if(nama.trim().equals("")){
-                    etNama.setError("Nama Harus Diisi");
-                }
-                else{
-                    Toast.makeText(MainActivity.this, "Selamat " + nama + ", Anda Terdaftar!", Toast.LENGTH_SHORT).show();
-                }
+                Toast.makeText(getApplicationContext(), "Apa Kabar Kamu", Toast.LENGTH_SHORT).show();
             }
         });
-
-
 
     }
 }
